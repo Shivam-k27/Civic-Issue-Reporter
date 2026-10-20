@@ -25,4 +25,7 @@ app.use("/api/v1", issue_routes_1.default);
 app.use("/api", (_req, res) => {
     res.status(404).json({ message: "API route not found" });
 });
+app.get('/', (req, res) => {
+    res.send('Civic Issue Reporter Backend is Running');
+});
 exports.default = app;
